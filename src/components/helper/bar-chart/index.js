@@ -49,6 +49,9 @@ function TheBarChart({datasets}) {
         beginAtZero: true,
         ticks: {
           color: "#FFF",  
+          callback: function(value, index, values) {
+          return value / 1e6 + 'M'
+         },
         }
       },
       
